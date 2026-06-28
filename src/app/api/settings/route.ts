@@ -1,8 +1,8 @@
 import connectDb from "@/lib/db";
 import Settings from "@/model/settings.model";
-import { NextResponse } from "next/server";
+import { NextResponse,NextRequest } from "next/server";
 
-export async function POST(req:NextResponse) {
+export async function POST(req:NextRequest) {
     try{
         const {ownerId,busniessName,supportEmail,knowledge}=await req.json()
         if(!ownerId){
